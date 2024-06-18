@@ -1,0 +1,81 @@
+<body>
+    <script type="text/javascript">
+        /*
+			KC_EJ29
+            Modificar el programa KC_EJ24 (promedio de alumnos) de forma tal que el cálculo del promedio se realice a través de una función. 
+  		*/
+        
+        var alumnos = new Array();
+        var notas = new Array();
+        var nombre = "";
+        var j = 0;
+        var mayor = 0
+        var alumnosOrdenados = new Array();
+        var notasOrdenadas = new Array();
+
+        
+
+        
+        
+        function pedirNombres(){
+            
+            while(nombre.toLowerCase() !== "terminar"){
+                nombre = prompt("Dime el nombre del alumno.(O 'terminar' para salir)");
+
+                if(nombre.toLowerCase() === "terminar"){
+                    break;
+                }
+
+                alumnos[j] = nombre;
+                
+                var media = 0;
+
+                for(i = 1; i <= 3; i++){        
+                    media = media + parseInt(prompt("Dime la nota del " + i + "º trimestre."));
+                }
+                media = media / 3;
+
+                notas[j] = media;
+                j++;
+            }
+            
+            
+        }
+
+        function ordenaNotas(){
+            for(i = 0; i <= alumnos.length - 1; i++){
+                document.write("" + alumnos[i] + " " + notas[i] + "<br>");
+            }
+            
+
+            notasOrdenadas.sort(function(a, b){return b - a});
+
+            for(i = 0; i <= notasOrdenadas.length - 1; i++){
+                for(k = 0; k <= notas.length - 1; k++){
+                    
+
+                    if(notasOrdenadas[i] === notas[k]){
+                        if(notasOrdenadas[i] === notasOrdenadas[i - 1]){
+                        notas.splice(k,1);
+                        nombre.splice(k,1);
+                        }
+                        alumnosOrdenados[i] = alumnos[k];                
+                    }
+                }
+            }
+            for(i = 0; i <= alumnosOrdenados.length - 1; i++){
+            document.write("" + alumnosOrdenados[i] + " " + notasOrdenadas[i] + "<br>");
+            }
+        }
+
+        function mostrar(){
+            for(i = 0; i <= alumnosOrdenados.length - 1; i++){
+                document.write("Nombre: " + alumnosOrdenados[i] + " Nota: " + notasOrdenadas[i] + "<br>");
+            }
+        }
+        
+        pedirNombres();
+        ordenaNotas();
+        mostrar();
+    </script>
+</body>

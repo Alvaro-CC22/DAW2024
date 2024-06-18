@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.conten-center{
+  width: 70px;
+  height: 300px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.bg-skyblue{
+  background-color:deepskyblue
+}
+
+.bg-darkblue{
+  background-color: #1b1b32;
+}
+
+.testimonios {
+  padding: 40px 40px 80px 40px;
+}
+
+.testimonios .carousel {
+  max-width: 800px;
+}
+
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-item .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonio-imagen {
+  max-width: 15%;
+  margin: 10px 10px 20px 10px;
+}
+
+.testimonio-texto {
+  max-width: 70%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.testimonio-info {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+</style>
+<body>
+    
+  
+    <div class="d-flex flex-row-reverse mb-3">
+        <nav class="navbar navbar-expand-md bg-light navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                      <a class="nav-link col-lg- active" href="#">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link col-lg-" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link col-lg-" href="#testimonios">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link col-lg-" href="#contacto">Contacto</a>
+                      </li>
+                </ul>
+            </div>  
+        </nav>
+    </div>
+    
+    <div class="row mb-5">
+        <img src="icono-usuario.jpg" alt="icono-del-usuario" style="width: 20%;" class="center">
+        <h1 class="font-weight-bold" style="text-align:center;">Hola, soy Álvaro Camacho</h1>  
+        <h5 style="text-align:center;">Desarrollo sitios web y escribo artículos sobre programación</h5>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-4 col-sm-12">
+        <div class="card" >
+            <img class="card-img-top center" src="portatil-icono.png" alt="Card image" style="width:33%">
+            <div class="card-body">
+              <h4 class="card-title" style="text-align: center;">Desarrollo Web</h4>
+              <p class="card-text" style="text-align: center;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla vitae atque molestias, voluptatibus error consequuntur quod delectus iste tempora dolores excepturi maxime placeat consequatur praesentium sed doloremque fuga tempore saepe!</p>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="btn me-2 btn-primary font-weight-bold">HTML</a>
+                <a href="#" class="btn me-2 btn-primary font-weight-bold">CSS</a>
+                <a href="#" class="btn me-2 btn-primary font-weight-bold">JavaScript</a>
+                <a href="#" class="btn btn-primary font-weight-bold ">React</a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-sm-12">
+        <div class="card bg-darkblue" >
+            <img class="card-img-top center" src="portatil-icono.png" alt="Card image" style="width:33%">
+            <div class="card-body">
+              <h4 class="card-title text-white" style="text-align: center;">Artículos</h4>
+              <p class="card-text text-white" style="text-align: center;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla vitae atque molestias, voluptatibus error consequuntur quod delectus iste tempora dolores excepturi maxime placeat consequatur praesentium sed doloremque fuga tempore saepe!</p>
+              <div class="d-flex justify-content-center">
+                <div class="col-auto">
+                  <a href="#" class="btn me-2 btn-primary font-weight-bold">Escribir</a>
+                  <div class="col-auto"></div>
+                  <a href="#" class="btn me-2 btn-primary font-weight-bold">Editar</a>
+                  <div class="col-auto">
+                  <a href="#" class="btn btn-primary font-weight-bold">Blogs</a>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="col-xl-4 col-sm-12">
+        <div class="card">
+            <img class="card-img-top center" src="portatil-icono.png" alt="Card image" style="width:33%">
+            <div class="card-body">
+              <h4 class="card-title" style="text-align: center;">Estudiante</h4>
+              <p class="card-text" style="text-align: center;">Lorem ipsum dolo, sit amet consectetur adipisicing elit. Nulla vitae atque molestias, voluptatibus error consequuntur quod delectus iste tempora dolores excepturi maxime placeat consequatur praesentium sed doloremque fuga tempore saepe!</p>
+              <div class="d-flex justify-content-center">
+                  <a href="#" class="btn me-2 btn-primary font-weight-bold">freeCodeCamp</a>
+                  <a href="#" class="btn me-2 btn-primary font-weight-bold">Desarrollo Web</a>
+                  <a href="#" class="btn btn-primary font-weight-bold">Python</a>
+              </div>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <h2 class="font-weight-bold" style="text-align:center;">Mis proyectos recientes</h2>  
+      <h5 style="text-align:center;">Estos son algunos de los proyectos que he creado recientemente.</h5>
+      <div class="d-flex justify-content-center">
+        <a href="#" class="btn me-2 bg-skyblue font-weight-bold">Ver más proyectos</a>
+      </div>
+      
+    </div>
+
+    <div class="row mt-5 mb-5">
+      <h2 id="articulos" class="font-weight-bold" style="text-align:center;">Artículos</h2>
+      <div class="d-flex justify-content-center">
+      <div class="card" style="max-width: 600px; width: 80%; margin: 20px;">
+        <div class="card-header font-weight-bold">Más recientes</div>
+          <ul class="list-group">
+            <li class="list-group-item"><a href="#">El decorador @property en Python - cómo usarlo, ventajas y sintaxis</a></li>
+            <li class="list-group-item"><a href="#">Python tutorial ciclos while - while True ejemplos de sintaxis y ciclos infinitos</a></li>
+            <li class="list-group-item"><a href="#">Python leer archivo JSON - cómo cargar JSON desde un archivo y procesar dumps</a></li>
+            <li class="list-group-item"><a href="#">Python cómo escribir en un archivo - abrir, leer, escribir y otras funciones de archivos explicadas</a></li>
+            <li class="list-group-item"><a href="#">¿Para qué se usa Python? 10+ usos del lenguaje de programación Python<</a></li>
+          </ul>
+      </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <h2 id="testimonios" class="font-weight-bold" style="text-align:center;">Testimonios</h2>  
+      <h5 style="text-align:center;">Estos son algunos testimonios de mis clientes.</h5>
+      <div class="d-flex justify-content-center">
+        <div id="testimonios-carrusel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <img class="testimonio-imagen rounded-circle" src="FA14.jpg" alt="Foto de Fernando">
+                <p style="max-width: 70%; font-size: 20px; text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit neque placeat illo saepe maxime cupiditate adipisci. Est quod error dolore aperiam ullam, sequi, itaque, illo odit fugiat esse repellat veritatis.</p>
+                <div class="testimonio-info">
+                  <p class="cliente">Fernando</p>
+                  <p class="cargo">Gerente de proyectos en DesarrolloWeb</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <img class="testimonio-imagen rounded-circle" src="LH44.jpg" alt="Foto de Lewis">
+                <p class="testimonio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit neque placeat illo saepe maxime cupiditate adipisci. Est quod error dolore aperiam ullam, sequi, itaque, illo odit fugiat esse repellat veritatis.</p>
+                <div class="testimonio-info">
+                  <p class="cliente">Lewis</p>
+                  <p class="cargo">Gerente de DesarrolloWeb</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <img class="testimonio-imagen rounded-circle" src="MV1.jpg" alt="Foto de Max">
+                <p class="testimonio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit neque placeat illo saepe maxime cupiditate adipisci. Est quod error dolore aperiam ullam, sequi, itaque, illo odit fugiat esse repellat veritatis.</p>
+                <div class="testimonio-info">
+                  <p class="cliente">Max</p>
+                  <p class="cargo">Director de DesarrolloWeb</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+    </div>
+    </div>
+
+    <div class="row mt-5 bg-darkblue">
+      <h2 id="contacto" class="font-weight-bold text-white" style="text-align:center;">Aprendo y creo todos los días.</h2>  
+      <h5 class="text-white" style="text-align:center;">Estos son algunos de los proyectos que he creado recientemente.</h5>
+      <div class="d-flex justify-content-center">
+        <a href="#" class="btn me-2 bg-skyblue font-weight-bold">Ver más proyectos</a>
+      </div>
+      
+    </div>
+</body>
+</html>

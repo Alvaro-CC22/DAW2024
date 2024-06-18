@@ -1,0 +1,25 @@
+<body>
+    <script type="text/javascript">
+    /*
+		KC_EJ17
+        Crear un programa que contenga un directorio con nombres y correos electrónicos. 
+        Solicitar el nombre de una persona y mostrar su correo electrónico. 
+        Indicar con un mensaje apropiado cuando no se encuentre un resultado válido.
+  	*/
+    var dir = {
+        "alvaro": "alvaro@gmail.com",
+        "dani": "dani@gmail.com",
+        "fernando": "fernando@gmail.com",
+        "marco": "marco@gmail.com",
+    };
+
+    var nombre = prompt("Dime un nombre y te digo su email:")
+    if(dir[nombre.toLowerCase()]){
+        alert(dir[nombre.toLowerCase()]);        
+    }
+    else{
+        alert("No hay datos sobre " + nombre)
+    }
+    
+    </script>
+</body>

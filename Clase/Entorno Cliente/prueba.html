@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de confirm en JavaScript</title>
+</head>
+<body>
+
+  <h2>Eliminar elemento</h2>
+
+  <button onclick="ask('Do you agree?','You agreed.', 'You canceled the execution.')">Te hago una pregunta</button>
+
+  <script>
+    let ask = (question, yes, no) => {
+    if(confirm(question)){
+        alert(yes)
+    }
+    else{
+        alert(no)
+    }
+}
+  </script>
+
+</body>
+</html>

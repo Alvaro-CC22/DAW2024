@@ -1,0 +1,23 @@
+::U5::
+what term is used to describe the ability of a subclass to provide a specific implementation of a method that is already defined in its superclass?{
+    ~%-25%Inheritance
+    =Method Overriding
+    ~%-25%Method Overloading
+    ~%-25%Encapsulation
+ }
+
+::U5::
+What OOP concept allows a class to implement multiple behavioral contracts, enabling it to inherit method signatures without specifying the actual implementation?{
+    ~%-25%Inheritance
+    =Interfaces
+    ~%-25%Abstraction
+    ~%-25%Polymorphism
+ }
+
+::U5::
+Which feature, introduced in some object-oriented languages, allows a subclass method to have a return type that is a subtype of the return type of the corresponding method in the superclass?{
+    ~%-25%Contravariant return
+    =Covariant return types
+    ~%-25%Coercive return
+    ~%-25%Polymorphic return
+ }

@@ -1,0 +1,23 @@
+::U3::
+What is the correct value to use in PHP when executing a query in MySQL to get an array that includes both numeric and associative keys?{
+=mysqli_fetch_array($result, MYSQLI_BOTH);
+~%-25%mysqli_fetch_assoc($result);
+~%-25%mysqli_fetch_array($result, MYSQLI_ASSOC | MYSQLI_NUM);
+~%-25%mysqli_fetch_row($result);
+}
+
+::U3::
+What are the typical parameters used in connecting to a MySQL database from PHP?{
+=host, port, dbname, unix_socket
+~%-25%server, database, user, password
+~%-25%url, username, database, protocol
+~%-25%address, port, name, socket
+}
+
+::U3::
+In PHP's exception handling model, what are the key keywords used for working with exceptions?{
+=try, throw and catch
+~%-25%catch and finally
+~%-25%exception and handleException
+~%-25%trigger and handle
+}

@@ -1,0 +1,25 @@
+<body>
+    <script type="text/javascript">
+    /*
+        KC_EJ07
+        Crea un programa que solicite tres notas y calcule su media. Dependiendo del valor de la media, mostrará si el resultado es Apto o No Apto.
+  	*/
+    
+    //prompt como entrada de datos
+    var n1 = parseInt(prompt("Dime la 1ª nota:"));
+    var n2 = parseInt(prompt("Dime la 2ª nota:"));
+    var n3 = parseInt(prompt("Dime la 3ª nota:"));
+
+    var media = ((n1 + n2 + n3) / 3).toFixed(2);
+
+
+    //resultado redondeado
+    if(media >= 5){
+        document.write("Apto");
+    }    
+    else{
+        document.write("No apto")
+    }
+
+    </script>
+</body>

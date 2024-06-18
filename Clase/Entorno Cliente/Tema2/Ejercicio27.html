@@ -1,0 +1,26 @@
+<body>
+    <script type="text/javascript">
+        /*
+			KC_EJ27
+            Crear un programa que contenga una función esPalindromo(texto) y determine si dicho texto es un palíndromo.
+  		*/
+    
+        function esPalindromo(texto) {
+              
+            textoSinEspacios = texto.replace(/\s/g,"");
+            lista = textoSinEspacios.split("");
+            listaInversa = textoSinEspacios.split("");
+            listaInversa.reverse();
+
+            if(lista.toString() == listaInversa.toString()){
+                alert("El texto es palíndromo.");
+            }
+            else{
+                alert("El texto no es palíndromo.");
+            }
+        }
+
+        var textoNuevo = prompt("Escribe un texto para ver si es palíndromo.");
+        esPalindromo(textoNuevo);
+    </script>
+</body>

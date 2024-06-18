@@ -1,0 +1,28 @@
+<body>
+    <script type="text/javascript">
+    /*
+		KC_EJ13
+        Crear un programa que contenga una lista de 20 números y muestre un rango de la lista. 
+        El inicio y fin del rango serán introducidos por el usuario y el programa deberá validar que sean valores válidos.
+  	*/
+    
+    //prompt como entrada de datos
+    var a = new Array();
+
+    for (i = 1; i <= 20; i++) {
+        a[i] = i;   
+    }
+    
+    var inicio = parseInt(prompt("Dime el inicio: "));
+    var fin = parseInt(prompt("Dime el fin: "));
+
+    var rango = a.slice(inicio, fin + 1);
+
+    if(inicio < fin && inicio > 0 && inicio < 21 && fin > 0 && fin < 21){
+        alert(rango);
+    }
+    else{
+        alert("El rango debe ser de 1 a 20 y el inicio debe ser menor que el final.")
+    }
+    </script>
+</body>

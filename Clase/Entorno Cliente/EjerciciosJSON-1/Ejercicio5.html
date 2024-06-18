@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Alumno</title>
+</head>
+<body>
+
+    <p id="titulo">Datos del alumno</p>
+
+    <script>
+        // JSON string
+        var jsonString = '{"nombre": "Mario", "apellidos": "Sánchez López", "nacido": "26-11-1986", "curso": "DAW2", "asignatura": "DEWC", "ciudad": "El Puerto de Santa María"}';
+
+        // Convertir JSON string a objeto JavaScript
+        var alumnoObj = JSON.parse(jsonString);
+
+        // Convertir la propiedad "nacido" a formato fecha
+        alumnoObj.nacido = new Date(alumnoObj.nacido);
+
+        // Concatenar los valores de todas las propiedades
+        var datosAlu = "";
+        for (var prop in alumnoObj) {
+            if (alumnoObj.hasOwnProperty(prop)) {
+                datosAlu += prop + ": " + alumnoObj[prop] + "<br>";
+            }
+        }
+
+        // Cambiar el contenido en la página con la concatenación
+        document.getElementById('titulo').innerHTML = datosAlu;
+    </script>
+
+</body>
+</html>

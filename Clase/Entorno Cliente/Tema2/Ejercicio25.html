@@ -1,0 +1,33 @@
+<body>
+    <script type="text/javascript">
+    /*
+		KC_EJ25
+        Crear un programa que contenga un número aleatorio del 1 al 100, sin mostrarlo, y permitir que el usuario intente adivinarlo. 
+        El usuario solamente tendrá 5 oportunidades, 
+        en cada oportunidad fallida se le darán pistas para saber si debe intentar con un número mayor o menor.
+
+  	*/
+    var n = Math.floor(Math.random() * 100) + 1;
+    var opor = 5;
+
+    while(opor > 0){
+        var adi = parseInt(prompt("Intenta adivinar el número. Tienes " + opor + " intentos."));
+        if(adi === n){
+            alert("¡Felicidades, adivinaste el número!");
+            break;
+            
+        }
+        else{
+            if(adi > n){
+                alert("Te has pasado.")
+            }
+            else{
+                alert("Te quedaste corto.")
+            }
+            opor--;
+        }
+    }
+
+    alert("Te quedaste sin intentos. El número era " + n + ".")
+    </script>
+</body>

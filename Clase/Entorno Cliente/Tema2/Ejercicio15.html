@@ -1,0 +1,19 @@
+<body>
+    <script type="text/javascript">
+    /*
+		KC_EJ15
+        Crear un programa que reciba los el nombre y las calificaciones de 3 personas. 
+        Para cada persona deberá guardar la información en una tupla. 
+        El programa no mostrará resultados de salida.
+  	*/
+    var notas = new Array();
+    //prompt como entrada de datos
+    for(i = 0; i < 3; i++){
+        var nombre = prompt("Dime el nombre de la " + (i+1) + "ª persona.");
+        var nota = parseFloat(prompt("Dime la nota de la " + (i+1) + "ª persona."));
+                
+        notas[i] = ("Nombre: " + nombre + " Nota: " + nota);
+    }
+    
+    </script>
+</body>

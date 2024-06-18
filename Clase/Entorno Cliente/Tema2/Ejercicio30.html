@@ -1,0 +1,131 @@
+<body>
+    <script type="text/javascript">
+        /*
+			KC_EJ30
+            Crear un programa que simule una máquina expendedora de gaseosas con las siguientes características:
+            Las bebidas disponibles son: Fanta, Pepsi, 7Up. 
+            Todas las bebidas tienen un costo de €1,0
+            La máquina recibe monedas de 10, 20 y 50 cent, y €1,0
+
+            El programa deberá permitir que el usuario seleccione una bebida e ingrese una a una las monedas. 
+            El programa deberá detenerse cuando el importe de la gaseosa haya sido completado 
+            y, de ser necesario, determinar el sobrante.
+
+  		*/
+        
+        var dinero;
+        var deuda = 100;
+        var opcion = parseInt(prompt("¿Que deseas? \n 1-Fanta \n 2-Pepsi \n 3-7Up"));
+        while(opcion < 1 || opcion > 3){
+            var opcion = parseInt(prompt("Opción incorrecta \n 1-Fanta \n 2-Pepsi \n 3-7Up"));
+
+        }
+
+        if(opcion == 1){ 
+                alert("Has elegido Fanta. Debe realizar el pago de 1€.");
+                while(deuda > 0){
+                    dinero = parseInt(prompt("Debes " + (deuda / 100) + "€. Solo acepto monedas de 10, 20 o 50 cent y de 1 euro."));
+
+                    while(!(dinero == 10 || dinero == 20 || dinero == 50 || dinero == 1)){
+                        dinero = parseInt(prompt("No acepto ese tipo de moneda. Debes " + (deuda / 100) + "€. Solo acepto monedas de 10, 20 o 50 cent y de 1 euro."));
+                    }
+
+                    if(dinero === 10){
+                        deuda = deuda - dinero;
+                    }
+                    else{
+                        if(dinero === 20){
+                        
+                            deuda = deuda - dinero;
+                        }
+                        else{
+                            if(dinero === 50){
+                                deuda = deuda - dinero;
+                            }
+                            else{
+                                if(dinero === 1){
+                                    deuda = deuda - (dinero * 100);
+                                }
+                            }
+                        }
+                    }
+                }
+                if(deuda < 0){
+                    alert("Ya esta pagado. Aqui tienes tu bebida y tu vuelta. Tu vuelta es " + (deuda / -100) + "€.")
+                }
+                else{
+                    alert("Ya esta pagado. Aqui tienes tu bebida.")
+                }
+        }
+        else{
+            if(opcion == 2){
+                alert("Has elegido Pepsi. Debe realizar el pago de 1€.");
+                while(deuda > 0){
+                    var dinero = parseInt(prompt("Debes " + (deuda / 100) + "€. Solo acepto monedas de 10, 20 o 50 cent y de 1 euro."));
+                    while(!(dinero == 10 || dinero == 20 || dinero == 50 || dinero == 1)){
+                        dinero = parseInt(prompt("No acepto ese tipo de moneda. Debes " + (deuda / 100) + "€. Solo acepto monedas de 10, 20 o 50 cent y de 1 euro."));
+                    }
+                    if(dinero == 10){
+                        deuda = deuda - dinero;
+                    }
+                    else{
+                        if(dinero == 20){
+                            deuda = deuda - dinero;
+                        }
+                        else{
+                            if(dinero == 50){
+                                deuda = deuda - dinero;
+                            }
+                            else{
+                                if(dinero == 1){
+                                    deuda = deuda - (dinero * 100);
+                                }
+                            }
+                        }
+                    }
+                }
+                if(deuda < 0){
+                    alert("Ya esta pagado. Aqui tienes tu bebida y tu vuelta. Tu vuelta es " + (deuda / -100) + "€.")
+                }
+                else{
+                    alert("Ya esta pagado. Aqui tienes tu bebida.")
+                }
+            
+            }
+            else{
+                alert("Has elegido 7Up. Debe realizar el pago de 1€.");
+                while(deuda > 0){
+                    var dinero = parseInt(prompt("Debes " + (deuda / 100) + "€. Solo acepto monedas de 10, 20 o 50 cent y de 1 euro."));
+                    while(!(dinero == 10 || dinero == 20 || dinero == 50 || dinero == 1)){
+                        dinero = parseInt(prompt("No acepto ese tipo de moneda. Debes " + (deuda / 100) + "€. Solo acepto monedas de 10, 20 o 50 cent y de 1 euro."));
+                    }
+                    if(dinero == 10){
+                        deuda = deuda - dinero;
+                    }
+                    else{
+                        if(dinero == 20){
+                            deuda = deuda - dinero;
+                        }
+                        else{
+                            if(dinero == 50){
+                                deuda = deuda - dinero;
+                            }
+                            else{
+                                if(dinero == 1){
+                                    deuda = deuda - (dinero * 100);
+                                }
+                            }
+                        }
+                    }
+                }
+                if(deuda < 0){
+                    alert("Ya esta pagado. Aqui tienes tu bebida y tu vuelta. Tu vuelta es " + (deuda / -100) + "€.")
+                }
+                else{
+                    alert("Ya esta pagado. Aqui tienes tu bebida.")
+                }
+            }
+        }    
+            
+    </script>
+</body>

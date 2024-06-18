@@ -1,0 +1,66 @@
+<body>
+    <script type="text/javascript">
+    /*
+		KC_EJ24
+        Modificar el programa KC_EJ23 para que muestre los resultados ordenados por la media, de forma descendente.
+
+  		*/
+    var alumnos = new Array();
+    var notas = new Array();
+    var j = 0;
+    var mayor = 0
+    var alumnosOrdenados = new Array();
+    var notasOrdenadas = new Array();
+
+    var nombre = "";
+
+    while(nombre.toLowerCase() !== "terminar"){
+        nombre = prompt("Dime el nombre del alumno.(O 'terminar' para salir)");
+
+        if(nombre.toLowerCase() === "terminar"){
+            break;
+        }
+
+        alumnos[j] = nombre;
+        
+        var media = 0;
+
+        for(i = 1; i <= 3; i++){        
+            media = media + parseInt(prompt("Dime la nota del " + i + "º trimestre."));
+        }
+        media = media / 3;
+
+        notas[j] = media;
+        j++;
+    }
+    for(i = 0; i <= alumnos.length - 1; i++){
+        document.write("" + alumnos[i] + " " + notas[i] + "<br>");
+    }
+
+    for(i = 0; i <= notas.length - 1; i++){
+        notasOrdenadas[i] = notas[i];
+    }
+
+    notasOrdenadas.sort(function(a, b){return b - a});
+
+    for(i = 0; i <= notasOrdenadas.length - 1; i++){
+        for(k = 0; k <= notas.length - 1; k++){
+            
+
+            if(notasOrdenadas[i] === notas[k]){
+                if(notasOrdenadas[i] === notasOrdenadas[i - 1]){
+                notas.splice(k,1);
+                nombre.splice(k,1);
+                }
+                alumnosOrdenados[i] = alumnos[k];                
+            }
+            
+            
+        }
+    }
+
+    for(i = 0; i <= alumnosOrdenados.length - 1; i++){
+        document.write("Nombre: " + alumnosOrdenados[i] + " Nota: " + notasOrdenadas[i] + "<br>");
+    }
+    </script>
+</body>

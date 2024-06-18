@@ -1,0 +1,20 @@
+<body>
+    <script type="text/javascript">
+    /*
+		KC_EJ18
+        Crear un programa que muestre los números naturales del 1 al N, donde N será dado por el usuario.
+    */
+
+    var n = parseInt(prompt("Dime el limite de la lista de números:"));
+
+    if(n !== isNaN){
+        for(i = 1; i <= n; i++){
+            document.write(i + "<br>")
+        }
+    }
+    else{
+        alert("Tienes que escribir un número")
+    }
+    
+    </script>
+</body>

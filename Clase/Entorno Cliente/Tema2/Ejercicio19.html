@@ -1,0 +1,21 @@
+<body>
+    <script type="text/javascript">
+    /*
+        KC_EJ19
+        Crear un programa que almacene 10 números dados por el usuario y muestre únicamente los pares.
+  	*/
+    var a = new Array();
+    
+    for(i = 0; i < 10; i++){
+        var n = parseInt(prompt("Dime el " + (i+1) + "º número."));
+        
+        a[i] = (n);
+    }
+
+    for(i = 0; i <= a.length - 1; i++){
+        if(a[i] % 2 == 0){
+            document.write(a[i] + "<br>")
+        }
+    }
+    </script>
+</body>

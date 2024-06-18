@@ -1,0 +1,11 @@
+{
+    "Número": 33,
+    "Cadena": "Grado",
+    "Booleano": true,
+    "Matriz": [2, 33, 66, 77, 51],
+    "Objeto": {
+        "Código": 631,
+        "Nombre": "Silla"
+    },
+    "nulo": null
+}

@@ -1,0 +1,22 @@
+<body>
+    <script type="text/javascript">
+    /*
+		KC_EJ09
+        Crea un programa que reciba una cantidad, y pregunte si desea convertirla de Euros a USD o de USD a Euros y muestre el resultado de la conversión.
+  	*/
+    
+    //prompt como entrada de datos
+    var cantidad = parseInt(prompt("Dime una cantidad:"));
+    var eleccion = prompt("1) De Euros a USD \n 2) De USD a Euros");
+
+    //resultado redondeado
+    if(eleccion === "1"){
+        alert(cantidad + " € son " + (cantidad * 1.07).toFixed(2) + " $");
+    }
+    if(eleccion === "2"){
+        alert(cantidad + " $ son " + (cantidad / 1.07).toFixed(2) + " €");
+    }
+
+
+    </script>
+</body>

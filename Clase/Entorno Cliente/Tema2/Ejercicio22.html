@@ -1,0 +1,23 @@
+<body>
+    <script type="text/javascript">
+    /*
+		KC_EJ22
+        Crear un programa que reciba los nombres y edades de 10 personas. 
+        Mostrar únicamente los nombres de las personas que tienen derecho a votar (mayores a 18 años).
+  	*/
+    var a = new Array();
+    j = 0;
+    for(i = 0; i < 10; i++){        
+        var nombre = prompt("Dime el nombre de la " + (i + 1) + "ª persona")
+        var edad = prompt("Dime la edad de la primera persona de la " + (i + 1) + "ª persona")
+        if(edad > 17){
+            a[j] = nombre;
+            j++;
+        }
+    }
+
+    for(i = 0; i <= a.length - 1; i++){
+        document.write(a[i] + "<br>")
+    }
+    </script>
+</body>

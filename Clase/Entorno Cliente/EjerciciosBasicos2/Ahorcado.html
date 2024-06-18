@@ -1,0 +1,40 @@
+<body>
+    <script type="text/javascript">
+        /*
+		El juego del ahorcado. ENTREGA OBLIGATORIA
+
+  		*/
+
+        alert("El juego del ahorcado")
+        var palabra = prompt("Dime la palabra a adivinar:");
+
+        lista = palabra.toLowerCase();
+        lista = lista.split("");
+        listaOculta = lista;
+        var intentos = 6;
+        var j = 6;
+        
+        for(i = 0; i <= lista.length - 1; i++){
+            listaOculta[i] = "_";
+        }
+        
+        alert(listaOculta.length)
+        
+        var letra = prompt(listaOculta + "\n Dime una letra. Tienes " + j + " intentos.");
+        if(palabra.indexOf(letra) != -1) {
+            for(i = 0; i <= listaOculta.length - 1; i++){
+                if(lista[i] === letra){
+                    listaOculta[i] = lista[i];
+                    alert(listaOculta);
+                }
+                else{
+                    j--;
+                }
+            }
+        }
+        
+        
+        
+
+    </script>
+</body>

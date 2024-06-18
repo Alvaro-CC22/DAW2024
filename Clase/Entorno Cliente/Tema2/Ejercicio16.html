@@ -1,0 +1,21 @@
+<body>
+    <script type="text/javascript">
+    /*
+		KC_EJ16
+        Crear un programa que contenga una Lista de nombres. 
+        Solicitar un índice de la lista y mostrar el valor del índice. 
+        El programa deberá validar que el índice es válido.
+
+  	*/
+    var nombre = ["Álvaro", "Daniel", "Fernando", "Marco"];
+    var n = parseInt(prompt("Dime un número del indice") - 1);
+
+    if(n < 0 || n > (nombre.length - 1)){
+        alert("El indice se comprende del 1 al " + nombre.length);
+    }
+    else{
+        document.write(nombre[n]);
+    }
+    
+    </script>
+</body>

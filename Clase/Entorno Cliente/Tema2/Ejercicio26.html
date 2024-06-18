@@ -1,0 +1,24 @@
+<body>
+    <script type="text/javascript">
+        /*
+		KC_EJ26
+        Crear un programa con una función pintaFila() que arme las filas de una tabla html. 
+        Completar el programa con la estructura de una tabla e invocando a la función N veces, 
+        donde N es un valor introducido por el usuario.
+
+  		*/
+    
+        function pintaFilas(n) {
+
+        document.write("<table border='5' width='50%'>");
+
+        for(i=0; i<n; i++) {
+            document.write("<tr><td> </td></tr>");
+        }
+            document.write("</table>");
+        }
+
+        var n = parseInt(prompt("¿Cuántas filas quieres?"));
+        pintaFilas(n);
+    </script>
+</body>

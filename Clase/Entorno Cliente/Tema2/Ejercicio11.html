@@ -1,0 +1,43 @@
+<body>
+    <script type="text/javascript">
+    /*
+		KC_EJ11
+        Crear un programa que reciba 3 números e indique cuál es el mayor y el menor.
+  		*/
+    
+    //prompt como entrada de datos
+    var n1 = parseInt(prompt("Dime el primer nº:"));
+    var n2 = parseInt(prompt("Dime el segundo nº:"));
+    var n3 = parseInt(prompt("Dime el tercer nº:"));
+    var mayor;
+    var menor;
+
+    if(n1 >= n2 && n1 >= n3){
+        mayor = n1;
+    }
+    else{
+        if(n2 >= n1 && n2 >= n3){
+            mayor = n2;
+        }
+        else{
+            mayor = n3;
+        }
+    }
+
+    if(n1 <= n2 && n1 <= n3){
+        menor = n1;
+    }
+    else{
+        if(n2 <= n1 && n2 <= n3){
+            menor = n2;
+        }
+        else{
+            menor = n3;
+        }
+    }
+
+    alert("El nº mas grande es: " + mayor + "\n El nº mas pequeño es: " + menor);
+    
+
+    </script>
+</body>

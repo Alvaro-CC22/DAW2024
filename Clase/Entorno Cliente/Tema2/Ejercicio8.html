@@ -1,0 +1,34 @@
+<body>
+    <script type="text/javascript">
+    /*
+		KC_EJ08
+        Crear un programa que reciba un número entero y muestre si es par o impar, positivo o negativo, o cero.
+    */
+    
+    //prompt como entrada de datos
+    var n = parseInt(prompt("Dime un número:"));
+
+
+
+    //resultado redondeado
+    if(n % 2 == 0){
+        document.write("Par" + "<br>");
+    }
+    else{
+        document.write("Impar" + "<br>");
+    } 
+
+    if(n > 0){
+        document.write("Positivo" + "<br>");
+    } 
+    else{
+        if(n < 0){
+        document.write("Negativo" + "<br>");
+        }
+        else{
+            document.write("Cero" + "<br>");
+        }
+    }
+
+    </script>
+</body>
