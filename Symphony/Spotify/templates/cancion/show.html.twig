@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cancion{% endblock %}
+
+{% block body %}
+{% if app.user %}
+        <div class="mb-3">
+            Has iniciado sesion como <a href="{{ path('app_perfil') }}">{{ app.user.userIdentifier }}</a>, <a href="{{ path('app_logout') }}">Salir</a>
+        </div>
+    {% endif %}
+    <h1>Cancion</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ cancion.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ cancion.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Duracion</th>
+                <td>{{ cancion.duracion ? cancion.duracion|date('H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_cancion_index') }}">back to list</a>
+
+    <a href="{{ path('app_cancion_edit', {'id': cancion.id}) }}">edit</a>
+
+    {{ include('cancion/_delete_form.html.twig') }}
+{% endblock %}

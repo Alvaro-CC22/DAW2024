@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenido, {{nombre}}{% endblock %}
+
+{% block body %}
+
+
+<div class="example-wrapper">
+{% if nombre is same as('admin') %}
+    <p>Hola administrador. Esta es la página de bienvenida.</p>
+
+{% else %}
+    
+    <p>Hola {{ nombre }}, bienvenido a nuestra pagina web.</p>
+{% endif %}
+
+    
+</div>
+{% endblock %}

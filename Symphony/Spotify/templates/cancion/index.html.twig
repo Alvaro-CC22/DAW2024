@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cancion index{% endblock %}
+
+{% block body %}
+{% if app.user %}
+        <div class="mb-3">
+            Has iniciado sesion como <a href="{{ path('app_perfil') }}">{{ app.user.userIdentifier }}</a>, <a href="{{ path('app_logout') }}">Salir</a>
+        </div>
+    {% endif %}
+    <h1>Cancion index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Duracion</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cancion in cancions %}
+            <tr>
+                <td>{{ cancion.id }}</td>
+                <td>{{ cancion.nombre }}</td>
+                <td>{{ cancion.duracion ? cancion.duracion|date('H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_cancion_show', {'id': cancion.id}) }}">show</a>
+                    <a href="{{ path('app_cancion_edit', {'id': cancion.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_cancion_new') }}">Create new</a>
+{% endblock %}

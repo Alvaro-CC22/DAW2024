@@ -1,0 +1,60 @@
+/* Asegúrate de incluir la fuente "F1 Regular" en tu proyecto */
+@font-face {
+    font-family: 'F1 Regular';
+    src: url('F1-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'F1 Regular', sans-serif;
+    color: orange;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: orange;
+}
+
+a {
+    font-family: 'F1 Regular', sans-serif;
+    font-weight: bold;
+    color: orange;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: black;
+    color: orange;
+    border: 1px solid orange;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: orange;
+    color: black;
+}
+
+input, textarea {
+    background-color: black;
+    color: orange;
+    border: 1px solid orange;
+    padding: 10px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: orange;
+}
+
+form {
+    margin: 20px 0;
+}
+

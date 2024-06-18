@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Perfil de {{ user.username }}</h1>
+    <h4><a href="{{ path('app_logout') }}">Logout</a></h4>
+
+    <a href="{{ path('cancion_list') }}">Ir a canciones</a>
+
+    <h2>Tus Playlists</h2>
+    
+    <button onclick="location.href='{{ path('playlist_add') }}'">Añadir nueva playlist</button>
+    
+    <ul>
+        {% for playlist in playlists %}
+            <li>
+            <a href="{{ path('playlist_show', {'id': playlist.id}) }}">{{ playlist.nombre }}</a>
+                
+                
+                <button onclick="location.href='{{ path('playlist_edit', {'id': playlist.id}) }}'">Editar</button>
+                
+                <form action="{{ path('playlist_delete', {'id': playlist.id}) }}" method="post" style="display:inline;">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ playlist.id) }}">
+                    <button type="submit">Borrar</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

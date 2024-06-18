@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% if app.user %}
+        <div class="mb-3">
+            Has iniciado sesion como <a href="{{ path('app_perfil') }}">{{ app.user.userIdentifier }}</a>, <a href="{{ path('app_logout') }}">Salir</a>
+        </div>
+    {% endif %}
+    <h1>Buscar Canciones</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.nombre) }}
+        {{ form_row(form.artista) }}
+        {{ form_row(form.ano) }}
+        {{ form_row(form.album) }}
+    {{ form_end(form) }}
+
+    <h2>Resultados de Búsqueda</h2>
+    <ul>
+        {% if canciones is not empty %}
+        {% for cancion in canciones %}
+            <li>
+                <a href="{{ path('cancion_show', {'id': cancion.id}) }}">{{ cancion.nombre }}</a> - {{ cancion.artista }} - {{ cancion.album }}
+            </li>
+        {% else %}
+            <li>No se encontraron canciones</li>
+        {% endfor %}
+        {% else %}
+            <li>No se busca nada</li>        
+        {% endif %}
+        
+    </ul>
+{% endblock %}

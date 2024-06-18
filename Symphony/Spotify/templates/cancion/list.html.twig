@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% if app.user %}
+        <div class="mb-3">
+            Has iniciado sesion como <a href="{{ path('app_perfil') }}">{{ app.user.userIdentifier }}</a>, <a href="{{ path('app_logout') }}">Salir</a>
+        </div>
+    {% endif %}
+    <h1>Lista de Canciones</h1>
+    <ul>
+        {% for cancion in canciones %}
+            <li>
+                <a href="{{ path('cancion_show', {'id': cancion.id}) }}">{{ cancion.nombre }}</a> - {{ cancion.artista }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

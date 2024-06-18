@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Producto específico{% endblock %}
+
+{% block body %}
+
+    {{product.getId}}
+    "{{product.getNombre}}"
+    {% if product.getDescripcion == null %}
+        NULL
+    {% else %}
+        "{{product.getDescripcion}}"
+    {% endif %}
+
+    {{product.getPrecio}}€
+    {{product.getStock }}
+    
+{% endblock %}

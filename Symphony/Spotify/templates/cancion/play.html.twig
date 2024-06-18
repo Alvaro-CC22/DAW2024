@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% if app.user %}
+        <div class="mb-3">
+            Has iniciado sesion como <a href="{{ path('app_perfil') }}">{{ app.user.userIdentifier }}</a>, <a href="{{ path('app_logout') }}">Salir</a>
+        </div>
+    {% endif %}
+    <h1>{{ cancion.nombre }}</h1>
+    <p>Artista: {{ cancion.artista }}</p>
+    <p>Álbum: {{ cancion.album }}</p>
+    <p>Año: {{ cancion.ano }}</p>
+    <p>Duración: {{ cancion.duracion }} segundos</p>
+
+    <audio controls>
+        <source src="{{ path('cancion_play', {'id': cancion.id}) }}" type="audio/{{ cancion.archivo|split('.')|last }}">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+{% endblock %}
